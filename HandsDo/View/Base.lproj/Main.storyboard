@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fxT-lg-NTj">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nok-FQ-Mqd">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,15 +12,95 @@
             <objects>
                 <viewController id="fxT-lg-NTj" customClass="FirstIntroduceViewController" customModule="HandsDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FOW-ob-lKT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKx-Dc-nf8">
+                                <rect key="frame" x="16" y="636" width="343" height="54"/>
+                                <color key="backgroundColor" red="0.40400311350000001" green="0.88992089029999999" blue="0.89412528280000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Obd-a5-WRm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Дальше">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButton:" destination="fxT-lg-NTj" eventType="touchUpInside" id="c1u-4n-rzL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите, что сделать" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCm-y6-iXF">
+                                <rect key="frame" x="16" y="0.0" width="221" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="Lcm-kh-a53"/>
+                                    <constraint firstAttribute="width" constant="221" id="Yp3-5u-4gV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.40021008250000001" green="0.88992023470000003" blue="0.89412540200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ответьте на уточняющие вопросы, укажите адрес и удобное время" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nt-89-gxj">
+                                <rect key="frame" x="16" y="104" width="315" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="2rO-Iv-7H9"/>
+                                    <constraint firstAttribute="height" constant="244" id="T5l-nk-l50"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HandLogoFirstIntroduceVC" translatesAutoresizingMaskIntoConstraints="NO" id="8i4-BY-6p5">
+                                <rect key="frame" x="187" y="478" width="188" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Rhq-IR-Rsc"/>
+                                    <constraint firstAttribute="width" constant="188" id="eJn-P9-rFg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="IQY-X5-1yE"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zKx-Dc-nf8" firstAttribute="leading" secondItem="IQY-X5-1yE" secondAttribute="leading" constant="16" id="CDn-qB-607"/>
+                            <constraint firstItem="IQY-X5-1yE" firstAttribute="trailing" secondItem="zKx-Dc-nf8" secondAttribute="trailing" constant="16" id="LgA-vL-Ush"/>
+                            <constraint firstItem="zKx-Dc-nf8" firstAttribute="bottom" secondItem="IQY-X5-1yE" secondAttribute="bottom" id="YRO-zX-IBy"/>
+                            <constraint firstItem="IQY-X5-1yE" firstAttribute="trailing" secondItem="8i4-BY-6p5" secondAttribute="trailing" id="bYn-1a-AFv"/>
+                            <constraint firstItem="xCm-y6-iXF" firstAttribute="leading" secondItem="IQY-X5-1yE" secondAttribute="leading" constant="16" id="eSo-7t-0hL"/>
+                            <constraint firstItem="xCm-y6-iXF" firstAttribute="top" secondItem="IQY-X5-1yE" secondAttribute="top" id="iiQ-oa-bhk"/>
+                            <constraint firstItem="2nt-89-gxj" firstAttribute="leading" secondItem="IQY-X5-1yE" secondAttribute="leading" constant="16" id="roq-to-6WB"/>
+                            <constraint firstItem="2nt-89-gxj" firstAttribute="top" secondItem="xCm-y6-iXF" secondAttribute="bottom" id="w99-S5-HGd"/>
+                            <constraint firstItem="zKx-Dc-nf8" firstAttribute="top" secondItem="8i4-BY-6p5" secondAttribute="bottom" constant="30" id="xN2-QF-nOA"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dtv-uy-KdV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpM-AO-jKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-733" y="35"/>
+            <point key="canvasLocation" x="176.81159420289856" y="34.821428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uJm-Uq-4Zs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nok-FQ-Mqd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="oIM-GM-ypS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fxT-lg-NTj" kind="relationship" relationship="rootViewController" id="aVJ-7L-xhs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUf-cS-kcs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-552" y="35"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HandLogoFirstIntroduceVC" width="213" height="145"/>
+    </resources>
 </document>
