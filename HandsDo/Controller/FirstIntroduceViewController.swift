@@ -24,7 +24,7 @@ class FirstIntroduceViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    @IBAction func goToSecondVC(_ sender: Any) {
+    @IBAction func goToSecondIntroduceVC(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(identifier: "SecondIntroduceViewController") as? SecondIntroduceViewController else { return }
         self.show(vc, sender: nil)

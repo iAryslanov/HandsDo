@@ -19,6 +19,12 @@ class SecondIntroduceViewController: UIViewController {
         navigationItem.title = "Как мы работаем"
         nextButton.layer.cornerRadius = 15
     }
-
-
+    
+    // MARK: - Navigation
+    @IBAction func goToThirdIntroduceVC(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(identifier: "ThirdIntroduceViewController") as? ThirdIntroduceViewController else { return }
+        self.show(vc, sender: nil)
+    }
+    
 }

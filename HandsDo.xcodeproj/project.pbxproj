@@ -14,6 +14,7 @@
 		B30ED6CC2518B2AC00BE7E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30ED6CA2518B2AC00BE7E73 /* LaunchScreen.storyboard */; };
 		B31940C12519E2BB00E784DC /* FirstIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */; };
 		B31940C4251A142D00E784DC /* SecondIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */; };
+		B31940D0251A37EF00E784DC /* ThirdIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B30ED6CD2518B2AC00BE7E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroduceViewController.swift; sourceTree = "<group>"; };
 		B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondIntroduceViewController.swift; sourceTree = "<group>"; };
+		B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdIntroduceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */,
 				B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */,
+				B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				B31940C12519E2BB00E784DC /* FirstIntroduceViewController.swift in Sources */,
 				B30ED6C02518B2AB00BE7E73 /* AppDelegate.swift in Sources */,
+				B31940D0251A37EF00E784DC /* ThirdIntroduceViewController.swift in Sources */,
 				B31940C4251A142D00E784DC /* SecondIntroduceViewController.swift in Sources */,
 				B30ED6C22518B2AB00BE7E73 /* SceneDelegate.swift in Sources */,
 			);
