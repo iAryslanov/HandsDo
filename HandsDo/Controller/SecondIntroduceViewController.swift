@@ -24,7 +24,7 @@ class SecondIntroduceViewController: UIViewController {
     @IBAction func goToThirdIntroduceVC(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(identifier: "ThirdIntroduceViewController") as? ThirdIntroduceViewController else { return }
-        self.show(vc, sender: nil)
+        show(vc, sender: nil)
     }
     
 }

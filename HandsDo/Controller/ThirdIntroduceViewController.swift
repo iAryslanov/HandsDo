@@ -19,5 +19,13 @@ class ThirdIntroduceViewController: UIViewController {
         nextButton.layer.cornerRadius = 15
     }
     
+    // MARK: - Navigation
+    
+    @IBAction func goToAllowNotificationsVC(_ sender: Any?) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(identifier: "AllowNotificationsViewController") as? AllowNotificationsViewController else { return }
+        show(vc, sender: nil)
+    }
+    
 
 }

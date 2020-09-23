@@ -15,6 +15,7 @@
 		B31940C12519E2BB00E784DC /* FirstIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */; };
 		B31940C4251A142D00E784DC /* SecondIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */; };
 		B31940D0251A37EF00E784DC /* ThirdIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */; };
+		B355D36F251B2E8C0026D082 /* AllowNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroduceViewController.swift; sourceTree = "<group>"; };
 		B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondIntroduceViewController.swift; sourceTree = "<group>"; };
 		B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdIntroduceViewController.swift; sourceTree = "<group>"; };
+		B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowNotificationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */,
 				B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */,
 				B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */,
+				B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				B31940D0251A37EF00E784DC /* ThirdIntroduceViewController.swift in Sources */,
 				B31940C4251A142D00E784DC /* SecondIntroduceViewController.swift in Sources */,
 				B30ED6C22518B2AB00BE7E73 /* SceneDelegate.swift in Sources */,
+				B355D36F251B2E8C0026D082 /* AllowNotificationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

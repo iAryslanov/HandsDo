@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -169,7 +170,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToThirdIntroduceVC:" destination="2nC-RC-4bl" eventType="touchUpInside" id="Z1d-z1-SgZ"/>
+                                    <action selector="goToAllowNotificationsVC:" destination="905-NL-xsL" eventType="touchUpInside" id="vCI-ao-1l4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оплатите работу" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrM-7T-OMm">
@@ -221,6 +222,75 @@
             </objects>
             <point key="canvasLocation" x="1565.5999999999999" y="34.729064039408868"/>
         </scene>
+        <!--Allow Notifications View Controller-->
+        <scene sceneID="sJT-c9-V4b">
+            <objects>
+                <viewController storyboardIdentifier="AllowNotificationsViewController" id="2n8-ch-oGw" customClass="AllowNotificationsViewController" customModule="HandsDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m6w-hg-uxh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe4-Ps-93w">
+                                <rect key="frame" x="16" y="724" width="343" height="54"/>
+                                <color key="backgroundColor" red="0.084709100430000003" green="0.0022639501839999999" blue="0.96084350350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="fSV-Ve-2Jn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Разрешить уведомления">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HandLogoAllowNotificationsVC" translatesAutoresizingMaskIntoConstraints="NO" id="dsK-p8-mKm">
+                                <rect key="frame" x="220" y="44" width="155" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="O1I-bN-O3d"/>
+                                    <constraint firstAttribute="width" constant="155" id="tt5-cj-6YP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы будем держать вас в курсе статуса заказа и сообщать о скидках" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-XN-cpr">
+                                <rect key="frame" x="16" y="528" width="335" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="wRc-7L-oLY"/>
+                                    <constraint firstAttribute="height" constant="188" id="wTY-iz-Lp2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разрешите уведомления" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lg9-mt-Li8">
+                                <rect key="frame" x="16" y="392" width="276" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="276" id="nlG-1C-vRi"/>
+                                    <constraint firstAttribute="height" constant="136" id="oBY-A3-xyF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.078786231580000005" green="0.18400135640000001" blue="0.91770201920000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HaT-fR-RIq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HaT-fR-RIq" firstAttribute="trailing" secondItem="Qe4-Ps-93w" secondAttribute="trailing" constant="16" id="GJD-iu-gx1"/>
+                            <constraint firstItem="lg9-mt-Li8" firstAttribute="leading" secondItem="HaT-fR-RIq" secondAttribute="leading" constant="16" id="Y5g-gJ-S8M"/>
+                            <constraint firstItem="vh2-XN-cpr" firstAttribute="leading" secondItem="HaT-fR-RIq" secondAttribute="leading" constant="16" id="ZFB-7X-xam"/>
+                            <constraint firstItem="Qe4-Ps-93w" firstAttribute="top" secondItem="vh2-XN-cpr" secondAttribute="bottom" constant="8" symbolic="YES" id="ask-gg-5R5"/>
+                            <constraint firstItem="dsK-p8-mKm" firstAttribute="top" secondItem="HaT-fR-RIq" secondAttribute="top" id="ixh-aS-7v4"/>
+                            <constraint firstItem="vh2-XN-cpr" firstAttribute="top" secondItem="lg9-mt-Li8" secondAttribute="bottom" id="qUN-O2-vPw"/>
+                            <constraint firstItem="Qe4-Ps-93w" firstAttribute="bottom" secondItem="HaT-fR-RIq" secondAttribute="bottom" id="r7u-YQ-S9x"/>
+                            <constraint firstItem="Qe4-Ps-93w" firstAttribute="leading" secondItem="HaT-fR-RIq" secondAttribute="leading" constant="16" id="vFP-aX-Ssf"/>
+                            <constraint firstItem="dsK-p8-mKm" firstAttribute="trailing" secondItem="HaT-fR-RIq" secondAttribute="trailing" id="wqd-He-CXd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="allowButton" destination="Qe4-Ps-93w" id="DyO-NZ-rNN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ey2-dL-rwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2269.5999999999999" y="34.729064039408868"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="uJm-Uq-4Zs">
             <objects>
@@ -241,8 +311,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HandLogoAllowNotificationsVC" width="226.33332824707031" height="291"/>
         <image name="HandLogoFirstIntroduceVC" width="213" height="145"/>
         <image name="HandLogoSecondIntroduceVC" width="162.33332824707031" height="167.66667175292969"/>
         <image name="HandLogoThirdIntroduceVC" width="156" height="145.66667175292969"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
