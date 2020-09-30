@@ -9,8 +9,8 @@ import UIKit
 
 class SecondIntroduceViewController: UIViewController {
 
+    @IBOutlet weak var backBarButton: UIBarButtonItem!
     @IBOutlet weak var nextButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +20,18 @@ class SecondIntroduceViewController: UIViewController {
         nextButton.layer.cornerRadius = 15
     }
     
+   
     // MARK: - Navigation
+    
+    @IBAction func goToFirstIntroduceVC(_ sender: Any) {
+        // Navigation logic
+    }
+    
     @IBAction func goToThirdIntroduceVC(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(identifier: "ThirdIntroduceViewController") as? ThirdIntroduceViewController else { return }
         show(vc, sender: nil)
     }
+    
     
 }

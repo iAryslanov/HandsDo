@@ -22,6 +22,12 @@ class AllowNotificationsViewController: UIViewController {
     
 
     // MARK: - Navigation
+    
+    @IBAction func goToChooseYourCityVC(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(identifier: "ChooseYourCityViewController") as? ChooseYourCityViewController else { return }
+        show(vc, sender: nil)
+    }
 
 
 }
