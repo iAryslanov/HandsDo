@@ -15,6 +15,7 @@
 		B31940C12519E2BB00E784DC /* FirstIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */; };
 		B31940C4251A142D00E784DC /* SecondIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */; };
 		B31940D0251A37EF00E784DC /* ThirdIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */; };
+		B3285A2625246EC200C683B1 /* CitiesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3285A2525246EC200C683B1 /* CitiesTable.swift */; };
 		B34E1D6025231F2D00E49CFD /* ChooseYourCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E1D5E25231F2D00E49CFD /* ChooseYourCityViewController.swift */; };
 		B34E1D692523418700E49CFD /* ChooseYourCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B34E1D672523418700E49CFD /* ChooseYourCityTableViewCell.xib */; };
 		B34E1D6A2523418700E49CFD /* ChooseYourCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E1D682523418700E49CFD /* ChooseYourCityTableViewCell.swift */; };
@@ -34,6 +35,7 @@
 		B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroduceViewController.swift; sourceTree = "<group>"; };
 		B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondIntroduceViewController.swift; sourceTree = "<group>"; };
 		B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdIntroduceViewController.swift; sourceTree = "<group>"; };
+		B3285A2525246EC200C683B1 /* CitiesTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTable.swift; sourceTree = "<group>"; };
 		B34E1D5E25231F2D00E49CFD /* ChooseYourCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseYourCityViewController.swift; sourceTree = "<group>"; };
 		B34E1D672523418700E49CFD /* ChooseYourCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseYourCityTableViewCell.xib; sourceTree = "<group>"; };
 		B34E1D682523418700E49CFD /* ChooseYourCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseYourCityTableViewCell.swift; sourceTree = "<group>"; };
@@ -73,11 +75,11 @@
 			isa = PBXGroup;
 			children = (
 				B31940B42519DD0800E784DC /* Application */,
-				B31940BF2519E26A00E784DC /* Controller */,
+				B3285A2825246EC800C683B1 /* Model */,
 				B31940B02519DC2300E784DC /* View */,
+				B31940BF2519E26A00E784DC /* Controller */,
 				B31940B12519DC4800E784DC /* Resources */,
 				B30ED6CD2518B2AC00BE7E73 /* Info.plist */,
-				B34E1D7525236DA700E49CFD /* Cells */,
 			);
 			path = HandsDo;
 			sourceTree = "<group>";
@@ -116,8 +118,17 @@
 				B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */,
 				B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */,
 				B34E1D5E25231F2D00E49CFD /* ChooseYourCityViewController.swift */,
+				B34E1D7525236DA700E49CFD /* Cells */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B3285A2825246EC800C683B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3285A2525246EC200C683B1 /* CitiesTable.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B34E1D7525236DA700E49CFD /* Cells */ = {
@@ -212,6 +223,7 @@
 				B30ED6C22518B2AB00BE7E73 /* SceneDelegate.swift in Sources */,
 				B355D36F251B2E8C0026D082 /* AllowNotificationsViewController.swift in Sources */,
 				B34E1D6025231F2D00E49CFD /* ChooseYourCityViewController.swift in Sources */,
+				B3285A2625246EC200C683B1 /* CitiesTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,13 @@ import UIKit
 
 class ChooseYourCityViewController: UIViewController {
     
+    private enum Constants {
+        static let defaultCount = 1
+    }
+    
+//    var cities = [CitiesTable]()
+    var cities = ["Краснодар", "Батуми", "Москва", "Тампа", "Алушта"]
+    
     @IBOutlet weak var chooseYourCityTableView: UITableView! {
         didSet {
             chooseYourCityTableView.delegate = self
@@ -25,6 +32,20 @@ class ChooseYourCityViewController: UIViewController {
 //        chooseYourCityTableView.tableFooterView?.backgroundColor = UIColor(patternImage: UIImage(named: "HandLogoChooseYourCityVC.jpg")!)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     
     // MARK: - Navigation
     
@@ -38,7 +59,7 @@ extension ChooseYourCityViewController: UITableViewDataSource, UITableViewDelega
     // MARK: - Table view data source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return cities.count + Constants.defaultCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
