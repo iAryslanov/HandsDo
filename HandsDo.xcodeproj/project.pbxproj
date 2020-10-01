@@ -113,10 +113,7 @@
 		B31940BF2519E26A00E784DC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */,
-				B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */,
-				B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */,
-				B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */,
+				B3B492A32526041A0020DA4F /* Introduce */,
 				B34E1D5E25231F2D00E49CFD /* ChooseYourCityViewController.swift */,
 				B34E1D7525236DA700E49CFD /* Cells */,
 			);
@@ -140,6 +137,17 @@
 				B34E1D7725236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B3B492A32526041A0020DA4F /* Introduce */ = {
+			isa = PBXGroup;
+			children = (
+				B31940C02519E2BB00E784DC /* FirstIntroduceViewController.swift */,
+				B31940C3251A142D00E784DC /* SecondIntroduceViewController.swift */,
+				B31940CF251A37EF00E784DC /* ThirdIntroduceViewController.swift */,
+				B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */,
+			);
+			path = Introduce;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

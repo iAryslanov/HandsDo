@@ -34,14 +34,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tmS-br-VNH">
+                        <rect key="frame" x="304" y="29.5" width="12" height="16.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="AJs-y6-jtz"/>
+                            <constraint firstAttribute="height" constant="20" id="TuO-G5-2QC"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="OVO-cH-BT0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="2K3-oc-E4A"/>
-                    <constraint firstAttribute="trailing" secondItem="OVO-cH-BT0" secondAttribute="trailing" constant="16" id="HTc-Hc-lJQ"/>
+                    <constraint firstItem="tmS-br-VNH" firstAttribute="leading" secondItem="UPL-Qj-2Vj" secondAttribute="trailing" id="Er2-gh-FJH"/>
                     <constraint firstAttribute="bottom" secondItem="UPL-Qj-2Vj" secondAttribute="bottom" constant="16" id="Qce-ax-yro"/>
+                    <constraint firstAttribute="trailing" secondItem="tmS-br-VNH" secondAttribute="trailing" id="WLa-eT-afv"/>
                     <constraint firstItem="UPL-Qj-2Vj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="aFU-h3-WFx"/>
                     <constraint firstItem="UPL-Qj-2Vj" firstAttribute="top" secondItem="OVO-cH-BT0" secondAttribute="bottom" id="ayO-tm-h8q"/>
-                    <constraint firstAttribute="trailing" secondItem="UPL-Qj-2Vj" secondAttribute="trailing" constant="16" id="h2Q-h3-ufJ"/>
+                    <constraint firstItem="tmS-br-VNH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bEW-f4-hka"/>
+                    <constraint firstItem="tmS-br-VNH" firstAttribute="leading" secondItem="OVO-cH-BT0" secondAttribute="trailing" id="nNk-Iv-NOB"/>
                     <constraint firstItem="OVO-cH-BT0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qIJ-rR-qdm"/>
                 </constraints>
             </tableViewCellContentView>
@@ -53,4 +62,7 @@
             <point key="canvasLocation" x="124.6376811594203" y="116.18303571428571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+    </resources>
 </document>
