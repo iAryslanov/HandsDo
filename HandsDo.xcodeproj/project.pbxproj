@@ -22,6 +22,8 @@
 		B34E1D7925236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B34E1D7725236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib */; };
 		B34E1D7A25236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E1D7825236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift */; };
 		B355D36F251B2E8C0026D082 /* AllowNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */; };
+		B38E4D50252707780039DD2C /* MainCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */; };
+		B38E4D542527193E0039DD2C /* CabinetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E4D532527193E0039DD2C /* CabinetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B34E1D7725236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseYourCityHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		B34E1D7825236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseYourCityHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowNotificationsViewController.swift; sourceTree = "<group>"; };
+		B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatalogViewController.swift; sourceTree = "<group>"; };
+		B38E4D532527193E0039DD2C /* CabinetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 			children = (
 				B3B492A32526041A0020DA4F /* Introduce */,
 				B34E1D5E25231F2D00E49CFD /* ChooseYourCityViewController.swift */,
+				B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */,
+				B38E4D532527193E0039DD2C /* CabinetViewController.swift */,
 				B34E1D7525236DA700E49CFD /* Cells */,
 			);
 			path = Controller;
@@ -226,8 +232,10 @@
 				B34E1D7A25236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift in Sources */,
 				B31940C12519E2BB00E784DC /* FirstIntroduceViewController.swift in Sources */,
 				B30ED6C02518B2AB00BE7E73 /* AppDelegate.swift in Sources */,
+				B38E4D50252707780039DD2C /* MainCatalogViewController.swift in Sources */,
 				B31940D0251A37EF00E784DC /* ThirdIntroduceViewController.swift in Sources */,
 				B31940C4251A142D00E784DC /* SecondIntroduceViewController.swift in Sources */,
+				B38E4D542527193E0039DD2C /* CabinetViewController.swift in Sources */,
 				B30ED6C22518B2AB00BE7E73 /* SceneDelegate.swift in Sources */,
 				B355D36F251B2E8C0026D082 /* AllowNotificationsViewController.swift in Sources */,
 				B34E1D6025231F2D00E49CFD /* ChooseYourCityViewController.swift in Sources */,

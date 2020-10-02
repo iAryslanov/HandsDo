@@ -15,9 +15,35 @@ class SecondIntroduceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setNavigationBar()
+        
         view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        navigationItem.title = "Как мы работаем"
         nextButton.layer.cornerRadius = 15
+    }
+    
+    func setNavigationBar() {
+        navigationItem.setHidesBackButton(true, animated:false)
+
+        // Custom view for back image with custom size
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 8, width: 20, height: 20))
+
+        if let imgBackArrow = UIImage(named: "greenChevronLeft") {
+            imageView.image = imgBackArrow
+        }
+        view.addSubview(imageView)
+
+        let backTap = UITapGestureRecognizer(target: self, action: #selector(backAction))
+        view.addGestureRecognizer(backTap)
+
+        let leftBarButtonItem = UIBarButtonItem(customView: view)
+        navigationItem.leftBarButtonItem = leftBarButtonItem
+        navigationItem.title = "Как мы работаем"
+    }
+    
+    @objc
+    func backAction(sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
     }
     
    

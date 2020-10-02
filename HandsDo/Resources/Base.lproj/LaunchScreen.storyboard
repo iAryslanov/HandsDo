@@ -60,6 +60,6 @@
     </scenes>
     <resources>
         <image name="LaunchScreenLogoImage" width="55.666667938232422" height="56"/>
-        <image name="LaunchScreenTextImage" width="394" height="217"/>
+        <image name="LaunchScreenTextImage" width="131.33332824707031" height="72.333335876464844"/>
     </resources>
 </document>

@@ -10,7 +10,7 @@ import UIKit
 class ChooseYourCityViewController: UIViewController {
     
     let footerImage = UIImageView()
-    var headerLabel = UILabel()
+    let headerLabel = UILabel()
     
     //    var cities = [CitiesTable]()
     var cityDictionary = [String : [String]]()
@@ -79,7 +79,6 @@ class ChooseYourCityViewController: UIViewController {
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    
     
     // MARK: - Navigation
     
