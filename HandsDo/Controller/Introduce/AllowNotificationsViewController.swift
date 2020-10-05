@@ -36,6 +36,16 @@ class AllowNotificationsViewController: UIViewController {
     }
     
     @IBAction func goToChooseYourCityVC(_ sender: Any) {
+        let notificationCenter = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+        
+        notificationCenter.requestAuthorization(options: options) {
+            (didAllow, error) in
+            if !didAllow {
+                print("User has declined notifications")
+            }
+        }
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(identifier: "ChooseYourCityViewController") as? ChooseYourCityViewController else { return }
         show(vc, sender: nil)
