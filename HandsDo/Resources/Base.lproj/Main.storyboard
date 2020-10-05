@@ -356,10 +356,19 @@
                                 <color key="textColor" red="0.078786231580000005" green="0.18400135640000001" blue="0.91770201920000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UR-Du-lZf">
+                                <rect key="frame" x="274" y="44" width="85" height="30"/>
+                                <state key="normal" title="Пропустить"/>
+                                <connections>
+                                    <action selector="skipButtonGoToChooseYourCityVC:" destination="2n8-ch-oGw" eventType="touchUpInside" id="S2M-RQ-ZNe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HaT-fR-RIq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4UR-Du-lZf" firstAttribute="top" secondItem="HaT-fR-RIq" secondAttribute="top" id="FMy-n2-dAQ"/>
+                            <constraint firstItem="HaT-fR-RIq" firstAttribute="trailing" secondItem="4UR-Du-lZf" secondAttribute="trailing" constant="16" id="G5H-b7-a5Y"/>
                             <constraint firstItem="HaT-fR-RIq" firstAttribute="trailing" secondItem="Qe4-Ps-93w" secondAttribute="trailing" constant="16" id="GJD-iu-gx1"/>
                             <constraint firstItem="lg9-mt-Li8" firstAttribute="leading" secondItem="HaT-fR-RIq" secondAttribute="leading" constant="16" id="Y5g-gJ-S8M"/>
                             <constraint firstItem="vh2-XN-cpr" firstAttribute="leading" secondItem="HaT-fR-RIq" secondAttribute="leading" constant="16" id="ZFB-7X-xam"/>
@@ -373,6 +382,7 @@
                     </view>
                     <connections>
                         <outlet property="allowButton" destination="Qe4-Ps-93w" id="DyO-NZ-rNN"/>
+                        <outlet property="skipButton" destination="4UR-Du-lZf" id="knd-an-8e2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ey2-dL-rwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

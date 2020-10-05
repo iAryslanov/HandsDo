@@ -9,6 +9,7 @@ import UIKit
 
 class AllowNotificationsViewController: UIViewController {
     
+    @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var allowButton: UIButton!
 
     override func viewDidLoad() {
@@ -27,6 +28,12 @@ class AllowNotificationsViewController: UIViewController {
     
 
     // MARK: - Navigation
+    
+    @IBAction func skipButtonGoToChooseYourCityVC(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(identifier: "ChooseYourCityViewController") as? ChooseYourCityViewController else { return }
+        show(vc, sender: nil)
+    }
     
     @IBAction func goToChooseYourCityVC(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
