@@ -16,7 +16,7 @@ class AllowNotificationsViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        allowButton.layer.cornerRadius = 15
+        allowButton.layer.cornerRadius = allowButton.layer.frame.size.height / 3.5
     }
     
     override func viewWillAppear(_ animated: Bool) {

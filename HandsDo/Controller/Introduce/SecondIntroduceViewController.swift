@@ -18,7 +18,7 @@ class SecondIntroduceViewController: UIViewController {
         setNavigationBar()
         
         view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        nextButton.layer.cornerRadius = 15
+        nextButton.layer.cornerRadius = nextButton.layer.frame.size.height / 3.5
     }
     
     func setNavigationBar() {
