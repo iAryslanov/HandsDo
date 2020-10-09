@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pinkChevronLeft.jpeg",
+      "filename" : "Мелкий ремонт.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pinkChevronLeft-1.jpeg",
+      "filename" : "Мелкий ремонт-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "pinkChevronLeft-2.jpeg",
+      "filename" : "Мелкий ремонт-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

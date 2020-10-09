@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pinkChevronLeft.jpeg",
+      "filename" : "Прихожая.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pinkChevronLeft-1.jpeg",
+      "filename" : "Прихожая-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "pinkChevronLeft-2.jpeg",
+      "filename" : "Прихожая-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
