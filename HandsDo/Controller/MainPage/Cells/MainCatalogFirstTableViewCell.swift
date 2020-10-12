@@ -9,6 +9,12 @@ import UIKit
 
 class MainCatalogFirstTableViewCell: UITableViewCell {
 
+    static let identifier = "MainCatalogFirstTableViewCell"
+    
+    static func nib() -> UINib {
+        return UINib(nibName: identifier, bundle: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

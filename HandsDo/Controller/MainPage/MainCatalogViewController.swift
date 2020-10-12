@@ -36,8 +36,8 @@ class MainCatalogViewController: UIViewController {
         
         serviceTableView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
-        serviceTableView.register(UINib(nibName: "MainCatalogFirstTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCatalogFirstTableViewCell")
-        serviceTableView.register(UINib(nibName: "MainCatalogServiceHeaderCell", bundle: nil), forCellReuseIdentifier: "MainCatalogServiceHeaderCell")
+        serviceTableView.register(MainCatalogFirstTableViewCell.nib(), forCellReuseIdentifier: MainCatalogFirstTableViewCell.identifier)
+        serviceTableView.register(MainCatalogServiceHeaderCell.nib(), forCellReuseIdentifier: MainCatalogServiceHeaderCell.identifier)
     }
     
 }
@@ -57,7 +57,7 @@ extension MainCatalogViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = serviceTableView.dequeueReusableCell(withIdentifier: "MainCatalogServiceHeaderCell") as! MainCatalogServiceHeaderCell
+        let header = serviceTableView.dequeueReusableCell(withIdentifier: MainCatalogServiceHeaderCell.identifier) as! MainCatalogServiceHeaderCell
         
         header.configure(dataModel[section])
         
@@ -70,10 +70,10 @@ extension MainCatalogViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 && indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MainCatalogFirstTableViewCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogFirstTableViewCell.identifier, for: indexPath)
             return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainCatalogServiceCell", for: indexPath) as! MainCatalogServiceCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogServiceCell.identifier, for: indexPath) as! MainCatalogServiceCell
         
         cell.configure(dataModel[indexPath.section], index: indexPath.row)
         

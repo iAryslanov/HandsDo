@@ -9,17 +9,23 @@ import UIKit
 
 class MainCatalogServiceCell: UITableViewCell {
     
+    static let identifier = "MainCatalogServiceCell"
+    
     @IBOutlet weak var iconServiceImage: UIImageView!
     @IBOutlet weak var serviceLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+    static func nib() -> UINib {
+        return UINib(nibName: identifier, bundle: nil)
     }
     
     func configure(_ model: Services, index: Int) {
         serviceLabel.text = model.services[index]
         iconServiceImage.image = UIImage(named: model.services[index])
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
     }
     
     
