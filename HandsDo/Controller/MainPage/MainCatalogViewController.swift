@@ -12,7 +12,7 @@ class MainCatalogViewController: UIViewController {
     var dataModel = [
         Services(headerService: "Основные работы", services: ["Электрика", "Сантехника", "Мелкий ремонт"]),
         Services(headerService: "Ремонт и отделочные работы", services: ["Двери", "Окна, балконы, лоджии", "Стены", "Пол", "Потолок", "Проекты и сметы"]),
-        Services(headerService: "Установить или починить", services: ["Мебель", "IKEA", "Бытовая техника", "Кондиционеры, вентиляция", "Конпьютеры, цифровая техника"]),
+        Services(headerService: "Установить или починить", services: ["Мебель", "IKEA", "Бытовая техника", "Кондиционеры, вентиляция", "Компьютеры, цифровая техника"]),
         Services(headerService: "По комнатам", services: ["Гостиная", "Кухни", "Туалет и ванная", "Спальня", "Прихожая", "Кабинет"])
     ]
     
@@ -24,19 +24,21 @@ class MainCatalogViewController: UIViewController {
     }
     
     lazy var searchBar = UISearchBar(frame: CGRect.zero)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         searchBar.placeholder = "Услуга, проблема, предмет быта"
         navigationItem.titleView = searchBar
         
         view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
+        serviceTableView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        serviceTableView.register(UINib(nibName: "MainCatalogFirstTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCatalogFirstTableViewCell")
         serviceTableView.register(UINib(nibName: "MainCatalogServiceHeaderCell", bundle: nil), forCellReuseIdentifier: "MainCatalogServiceHeaderCell")
     }
-    
     
 }
 
@@ -55,19 +57,25 @@ extension MainCatalogViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = serviceTableView.dequeueReusableCell(withIdentifier: "MainCatalogServiceHeaderCell") as? MainCatalogServiceHeaderCell
-        headerView?.headerServiceLabel.text = dataModel[section].headerService
+        let header = serviceTableView.dequeueReusableCell(withIdentifier: "MainCatalogServiceHeaderCell") as! MainCatalogServiceHeaderCell
         
-        return headerView
+        header.configure(dataModel[section])
+        
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        30
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 && indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MainCatalogFirstTableViewCell", for: indexPath)
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCatalogServiceCell", for: indexPath) as! MainCatalogServiceCell
         
-        cell.serviceLabel.text = dataModel[indexPath.section].services[indexPath.row]
-        cell.iconServiceImage.image = UIImage(named: dataModel[indexPath.section].services[indexPath.row])
-        
-        //        cell.configure(dataModel[indexPath.row])
+        cell.configure(dataModel[indexPath.section], index: indexPath.row)
         
         return cell
     }

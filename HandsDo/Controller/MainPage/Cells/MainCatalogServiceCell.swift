@@ -17,9 +17,10 @@ class MainCatalogServiceCell: UITableViewCell {
         
     }
     
-//    func configure(_ model: Services) {
-//        serviceLabel.text =
-//    }
+    func configure(_ model: Services, index: Int) {
+        serviceLabel.text = model.services[index]
+        iconServiceImage.image = UIImage(named: model.services[index])
+    }
     
     
 }

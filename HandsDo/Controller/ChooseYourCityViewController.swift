@@ -38,7 +38,7 @@ class ChooseYourCityViewController: UIViewController {
         }
         
         citySectionTitles = [String](cityDictionary.keys)
-        citySectionTitles = citySectionTitles.sorted(by: <)
+        citySectionTitles = citySectionTitles.sorted(by: <) // column of letters to the right
         
         headerLabel.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 120)
         headerLabel.numberOfLines = 2
@@ -95,8 +95,13 @@ extension ChooseYourCityViewController: UITableViewDataSource, UITableViewDelega
         return citySectionTitles[section]
     }
     
-    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? { // column of letters to the right
         return citySectionTitles
+    }
+    
+    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        guard let index = citySectionTitles.firstIndex(of: title) else { return -1 }
+        return index
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -119,7 +124,7 @@ extension ChooseYourCityViewController: UITableViewDataSource, UITableViewDelega
             cell.cityLabel.text = cityValues[indexPath.row]
         }
         
-        //                cell.configure(<#Model#>[indexPath.row])
+//            cell.configure(<#Model#>[indexPath.row])
         
         return cell
     }
