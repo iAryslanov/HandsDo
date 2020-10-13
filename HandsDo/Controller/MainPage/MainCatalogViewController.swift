@@ -57,6 +57,10 @@ extension MainCatalogViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        if section == 0 {
+//            return nil
+//        }
+        
         let header = serviceTableView.dequeueReusableCell(withIdentifier: MainCatalogServiceHeaderCell.identifier) as! MainCatalogServiceHeaderCell
         
         header.configure(dataModel[section])
@@ -65,20 +69,27 @@ extension MainCatalogViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        30
+//        if section == 0 {
+//            return CGFloat.leastNormalMagnitude
+//        }
+        
+//        return section == 0 ? CGFloat.leastNormalMagnitude : 20
+        
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 && indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogFirstTableViewCell.identifier, for: indexPath)
+//        if indexPath.row == 0 && indexPath.section == 0 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogFirstTableViewCell.identifier, for: indexPath)
+//            return cell
+//        }
+        
+            let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogServiceCell.identifier, for: indexPath) as! MainCatalogServiceCell
+            
+            cell.configure(dataModel[indexPath.section], index: indexPath.row)
+            
             return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogServiceCell.identifier, for: indexPath) as! MainCatalogServiceCell
         
-        cell.configure(dataModel[indexPath.section], index: indexPath.row)
         
-        return cell
     }
-    
-    
-}
