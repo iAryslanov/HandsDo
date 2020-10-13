@@ -19,8 +19,6 @@
 		B34E1D6025231F2D00E49CFD /* ChooseYourCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E1D5E25231F2D00E49CFD /* ChooseYourCityViewController.swift */; };
 		B34E1D692523418700E49CFD /* ChooseYourCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B34E1D672523418700E49CFD /* ChooseYourCityTableViewCell.xib */; };
 		B34E1D6A2523418700E49CFD /* ChooseYourCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E1D682523418700E49CFD /* ChooseYourCityTableViewCell.swift */; };
-		B34E1D7925236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B34E1D7725236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib */; };
-		B34E1D7A25236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E1D7825236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift */; };
 		B355D36F251B2E8C0026D082 /* AllowNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */; };
 		B3673A08252C63FB00582E2B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3673A07252C63FB00582E2B /* Services.swift */; };
 		B3673A0B252C94E100582E2B /* MainCatalogServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3673A0A252C94E100582E2B /* MainCatalogServiceCell.swift */; };
@@ -47,8 +45,6 @@
 		B34E1D5E25231F2D00E49CFD /* ChooseYourCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseYourCityViewController.swift; sourceTree = "<group>"; };
 		B34E1D672523418700E49CFD /* ChooseYourCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseYourCityTableViewCell.xib; sourceTree = "<group>"; };
 		B34E1D682523418700E49CFD /* ChooseYourCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseYourCityTableViewCell.swift; sourceTree = "<group>"; };
-		B34E1D7725236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseYourCityHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		B34E1D7825236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseYourCityHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowNotificationsViewController.swift; sourceTree = "<group>"; };
 		B3673A07252C63FB00582E2B /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		B3673A0A252C94E100582E2B /* MainCatalogServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatalogServiceCell.swift; sourceTree = "<group>"; };
@@ -143,8 +139,6 @@
 			children = (
 				B34E1D682523418700E49CFD /* ChooseYourCityTableViewCell.swift */,
 				B34E1D672523418700E49CFD /* ChooseYourCityTableViewCell.xib */,
-				B34E1D7825236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift */,
-				B34E1D7725236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -245,7 +239,6 @@
 				B3FB8B89252DE7220068EFD8 /* MainCatalogServiceHeaderCell.xib in Resources */,
 				B30ED6C92518B2AC00BE7E73 /* Assets.xcassets in Resources */,
 				B30ED6C72518B2AB00BE7E73 /* Main.storyboard in Resources */,
-				B34E1D7925236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +254,6 @@
 				B3673A08252C63FB00582E2B /* Services.swift in Sources */,
 				B34E1D6A2523418700E49CFD /* ChooseYourCityTableViewCell.swift in Sources */,
 				B3673A0B252C94E100582E2B /* MainCatalogServiceCell.swift in Sources */,
-				B34E1D7A25236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift in Sources */,
 				B31940C12519E2BB00E784DC /* FirstIntroduceViewController.swift in Sources */,
 				B30ED6C02518B2AB00BE7E73 /* AppDelegate.swift in Sources */,
 				B38E4D50252707780039DD2C /* MainCatalogViewController.swift in Sources */,

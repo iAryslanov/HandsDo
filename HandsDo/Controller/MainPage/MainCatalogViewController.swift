@@ -42,6 +42,29 @@ class MainCatalogViewController: UIViewController {
     
 }
 
+//let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
+//view.addSubview(navBar)
+//
+//let navItem = UINavigationItem(title: "SomeTitle")
+//let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(selectorName:))
+//navItem.rightBarButtonItem = doneItem
+//
+//navBar.setItems([navItem], animated: false)
+
+//if let navigationBar = navigationController?.navigationBar {
+//    let firstFrame = CGRect(x: 0, y: 0, width: navigationBar.frame.width/2, height: navigationBar.frame.height)
+//    let secondFrame = CGRect(x: navigationBar.frame.width/2, y: 0, width: navigationBar.frame.width/2, height: navigationBar.frame.height)
+//
+//    let firstLabel = UILabel(frame: firstFrame)
+//    firstLabel.text = "First"
+//
+//    let secondLabel = UILabel(frame: secondFrame)
+//    secondLabel.text = "Second"
+//
+//    navigationBar.addSubview(firstLabel)
+//    navigationBar.addSubview(secondLabel)
+//}
+
 // MARK: - Configure table
 
 extension MainCatalogViewController: UITableViewDataSource, UITableViewDelegate {
