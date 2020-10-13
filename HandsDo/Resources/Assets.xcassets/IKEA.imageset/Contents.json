@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pinkChevronLeft.jpeg",
+      "filename" : "IKEA.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pinkChevronLeft-1.jpeg",
+      "filename" : "IKEA-1.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "pinkChevronLeft-2.jpeg",
+      "filename" : "IKEA-2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

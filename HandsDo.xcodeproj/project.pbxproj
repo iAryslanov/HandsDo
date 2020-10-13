@@ -22,8 +22,14 @@
 		B34E1D7925236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B34E1D7725236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib */; };
 		B34E1D7A25236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E1D7825236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift */; };
 		B355D36F251B2E8C0026D082 /* AllowNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */; };
+		B3673A08252C63FB00582E2B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3673A07252C63FB00582E2B /* Services.swift */; };
+		B3673A0B252C94E100582E2B /* MainCatalogServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3673A0A252C94E100582E2B /* MainCatalogServiceCell.swift */; };
+		B38C6337253057A6009670D3 /* MainCatalogFirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B38C6335253057A6009670D3 /* MainCatalogFirstTableViewCell.xib */; };
+		B38C6338253057A6009670D3 /* MainCatalogFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C6336253057A6009670D3 /* MainCatalogFirstTableViewCell.swift */; };
 		B38E4D50252707780039DD2C /* MainCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */; };
 		B38E4D542527193E0039DD2C /* CabinetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E4D532527193E0039DD2C /* CabinetViewController.swift */; };
+		B3FB8B89252DE7220068EFD8 /* MainCatalogServiceHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3FB8B87252DE7220068EFD8 /* MainCatalogServiceHeaderCell.xib */; };
+		B3FB8B8A252DE7220068EFD8 /* MainCatalogServiceHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB8B88252DE7220068EFD8 /* MainCatalogServiceHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +50,14 @@
 		B34E1D7725236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseYourCityHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		B34E1D7825236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseYourCityHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		B355D36E251B2E8C0026D082 /* AllowNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowNotificationsViewController.swift; sourceTree = "<group>"; };
+		B3673A07252C63FB00582E2B /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		B3673A0A252C94E100582E2B /* MainCatalogServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatalogServiceCell.swift; sourceTree = "<group>"; };
+		B38C6335253057A6009670D3 /* MainCatalogFirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCatalogFirstTableViewCell.xib; sourceTree = "<group>"; };
+		B38C6336253057A6009670D3 /* MainCatalogFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatalogFirstTableViewCell.swift; sourceTree = "<group>"; };
 		B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatalogViewController.swift; sourceTree = "<group>"; };
 		B38E4D532527193E0039DD2C /* CabinetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetViewController.swift; sourceTree = "<group>"; };
+		B3FB8B87252DE7220068EFD8 /* MainCatalogServiceHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCatalogServiceHeaderCell.xib; sourceTree = "<group>"; };
+		B3FB8B88252DE7220068EFD8 /* MainCatalogServiceHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatalogServiceHeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,19 +92,11 @@
 			children = (
 				B31940B42519DD0800E784DC /* Application */,
 				B3285A2825246EC800C683B1 /* Model */,
-				B31940B02519DC2300E784DC /* View */,
 				B31940BF2519E26A00E784DC /* Controller */,
 				B31940B12519DC4800E784DC /* Resources */,
 				B30ED6CD2518B2AC00BE7E73 /* Info.plist */,
 			);
 			path = HandsDo;
-			sourceTree = "<group>";
-		};
-		B31940B02519DC2300E784DC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		B31940B12519DC4800E784DC /* Resources */ = {
@@ -119,9 +123,8 @@
 			children = (
 				B3B492A32526041A0020DA4F /* Introduce */,
 				B34E1D5E25231F2D00E49CFD /* ChooseYourCityViewController.swift */,
-				B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */,
-				B38E4D532527193E0039DD2C /* CabinetViewController.swift */,
 				B34E1D7525236DA700E49CFD /* Cells */,
+				B37613302530506A005E787B /* MainPage */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				B3285A2525246EC200C683B1 /* CitiesTable.swift */,
+				B3673A07252C63FB00582E2B /* Services.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +145,28 @@
 				B34E1D672523418700E49CFD /* ChooseYourCityTableViewCell.xib */,
 				B34E1D7825236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift */,
 				B34E1D7725236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B37613302530506A005E787B /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */,
+				B38E4D532527193E0039DD2C /* CabinetViewController.swift */,
+				B376133225305080005E787B /* Cells */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		B376133225305080005E787B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B38C6336253057A6009670D3 /* MainCatalogFirstTableViewCell.swift */,
+				B38C6335253057A6009670D3 /* MainCatalogFirstTableViewCell.xib */,
+				B3673A0A252C94E100582E2B /* MainCatalogServiceCell.swift */,
+				B3FB8B88252DE7220068EFD8 /* MainCatalogServiceHeaderCell.swift */,
+				B3FB8B87252DE7220068EFD8 /* MainCatalogServiceHeaderCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -214,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B34E1D692523418700E49CFD /* ChooseYourCityTableViewCell.xib in Resources */,
+				B38C6337253057A6009670D3 /* MainCatalogFirstTableViewCell.xib in Resources */,
 				B30ED6CC2518B2AC00BE7E73 /* LaunchScreen.storyboard in Resources */,
+				B3FB8B89252DE7220068EFD8 /* MainCatalogServiceHeaderCell.xib in Resources */,
 				B30ED6C92518B2AC00BE7E73 /* Assets.xcassets in Resources */,
 				B30ED6C72518B2AB00BE7E73 /* Main.storyboard in Resources */,
 				B34E1D7925236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.xib in Resources */,
@@ -228,7 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FB8B8A252DE7220068EFD8 /* MainCatalogServiceHeaderCell.swift in Sources */,
+				B38C6338253057A6009670D3 /* MainCatalogFirstTableViewCell.swift in Sources */,
+				B3673A08252C63FB00582E2B /* Services.swift in Sources */,
 				B34E1D6A2523418700E49CFD /* ChooseYourCityTableViewCell.swift in Sources */,
+				B3673A0B252C94E100582E2B /* MainCatalogServiceCell.swift in Sources */,
 				B34E1D7A25236F7000E49CFD /* ChooseYourCityHeaderTableViewCell.swift in Sources */,
 				B31940C12519E2BB00E784DC /* FirstIntroduceViewController.swift in Sources */,
 				B30ED6C02518B2AB00BE7E73 /* AppDelegate.swift in Sources */,
@@ -316,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -371,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -389,6 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26U39N9LS4;
 				INFOPLIST_FILE = HandsDo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26U39N9LS4;
 				INFOPLIST_FILE = HandsDo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
