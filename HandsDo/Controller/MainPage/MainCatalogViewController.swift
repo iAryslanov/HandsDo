@@ -9,12 +9,7 @@ import UIKit
 
 class MainCatalogViewController: UIViewController {
     
-    var dataModel = [
-        Services(headerService: "Основные работы", services: ["Электрика", "Сантехника", "Мелкий ремонт"]),
-        Services(headerService: "Ремонт и отделочные работы", services: ["Двери", "Окна, балконы, лоджии", "Стены", "Пол", "Потолок", "Проекты и сметы"]),
-        Services(headerService: "Установить или починить", services: ["Мебель", "IKEA", "Бытовая техника", "Кондиционеры, вентиляция", "Компьютеры, цифровая техника"]),
-        Services(headerService: "По комнатам", services: ["Гостиная", "Кухни", "Туалет и ванная", "Спальня", "Прихожая", "Кабинет"])
-    ]
+    var dataModel = Services.getServices()
     
     @IBOutlet weak var serviceTableView: UITableView! {
         didSet {
@@ -41,29 +36,6 @@ class MainCatalogViewController: UIViewController {
     }
     
 }
-
-//let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
-//view.addSubview(navBar)
-//
-//let navItem = UINavigationItem(title: "SomeTitle")
-//let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(selectorName:))
-//navItem.rightBarButtonItem = doneItem
-//
-//navBar.setItems([navItem], animated: false)
-
-//if let navigationBar = navigationController?.navigationBar {
-//    let firstFrame = CGRect(x: 0, y: 0, width: navigationBar.frame.width/2, height: navigationBar.frame.height)
-//    let secondFrame = CGRect(x: navigationBar.frame.width/2, y: 0, width: navigationBar.frame.width/2, height: navigationBar.frame.height)
-//
-//    let firstLabel = UILabel(frame: firstFrame)
-//    firstLabel.text = "First"
-//
-//    let secondLabel = UILabel(frame: secondFrame)
-//    secondLabel.text = "Second"
-//
-//    navigationBar.addSubview(firstLabel)
-//    navigationBar.addSubview(secondLabel)
-//}
 
 // MARK: - Configure table
 

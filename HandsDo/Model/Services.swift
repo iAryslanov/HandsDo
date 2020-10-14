@@ -20,19 +20,20 @@ struct Services: Codable {
     ]
     
     static let servicesTemp = [
-        ["Электроника", "Сантехника", "Мелкий ремонт"],
+        ["Электрика", "Сантехника", "Мелкий ремонт"],
         ["Двери", "Окна, балконы, лоджии", "Стены", "Пол", "Потолок", "Проекты и сметы"],
         ["Мебель", "IKEA", "Бытовая техника", "Кондиционеры, вентиляция", "Компьютеры, цифровая техника"],
         ["Гостиная", "Кухни", "Туалет и ванная", "Спальня", "Прихожая", "Кабинет"]
     ]
     
     static func getServices() -> [Services] {
-        var myArray = [Services]()
-        for value in 0..<headersServicesTemp.count {
-            myArray.append(Services(headerService: headersServicesTemp[value], services: servicesTemp[value]))
+        var dataModel = [Services]()
+
+        for index in 0..<headersServicesTemp.count {
+            dataModel.append(Services(headerService: headersServicesTemp[index], services: servicesTemp[index]))
         }
         
-        return myArray
+        return dataModel
     }
     
     

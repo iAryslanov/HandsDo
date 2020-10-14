@@ -9,6 +9,9 @@ import UIKit
 
 class ChooseYourCityTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     static let identifier = "ChooseYourCityTableViewCell"
     
     static func nib() -> UINib {
@@ -20,8 +23,10 @@ class ChooseYourCityTableViewCell: UITableViewCell {
         descriptionLabel.text = model.description
     }
     
-    @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+//    let cityKey = dataModelPrefix[indexPath.section]
+//    if let cityValues = dataModelCityDictionary[cityKey] {
+//        cell.cityLabel.text = cityValues[indexPath.row]
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

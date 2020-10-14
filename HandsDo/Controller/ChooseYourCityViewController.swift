@@ -9,13 +9,9 @@ import UIKit
 
 class ChooseYourCityViewController: UIViewController {
     
-    let footerImage = UIImageView()
-    let headerLabel = UILabel()
-    
-    //    var cities = [CitiesTable]()
-    var cityDictionary = [String : [String]]()
-    var citySectionTitles = [String]()
-    var cities = ["Краснодар", "Volgograd", "Arkhangelsk", "Brooklyn", "Samara", "Rostov on Don", "Ryazan", "Батуми", "Москва", "Texas", "Krasnodar", "Тампа", "Алушта", "Sochi", "Тюмень", "Тольяти"]
+    let dataModel = CitiesTable.getCitiesModel()
+    let dataModelPrefix = CitiesTable.getCityPrefix()
+    let dataModelCityDictionary = CitiesTable.getCityDictionary()
     
     @IBOutlet weak var chooseYourCityTableView: UITableView! {
         didSet {
@@ -27,23 +23,8 @@ class ChooseYourCityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for city in cities {
-            let cityKey = String(city.prefix(1))
-            if var cityValues = cityDictionary[cityKey] {
-                cityValues.append(city)
-                cityDictionary[cityKey] = cityValues
-            } else {
-                cityDictionary[cityKey] = [city]
-            }
-        }
-        
-        citySectionTitles = [String](cityDictionary.keys)
-        citySectionTitles = citySectionTitles.sorted(by: <) // column of letters to the right
-        
         setHeaderLabel()
         setFooterImage()
-        
-        //        footer.translatesAutoresizingMaskIntoConstraints = false
         
         // Constraints
         NSLayoutConstraint.activate([
@@ -54,10 +35,12 @@ class ChooseYourCityViewController: UIViewController {
     }
     
     func setHeaderLabel() {
+        let headerLabel = UILabel()
+        
         headerLabel.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 120)
         headerLabel.numberOfLines = 2
         headerLabel.text = "Выберите свой город"
-        headerLabel.textAlignment = .left
+        headerLabel.textAlignment = .center
         headerLabel.textColor = #colorLiteral(red: 0.09628392011, green: 0.008938177489, blue: 1, alpha: 1)
         headerLabel.font = UIFont(name: "Avenir-Heavy", size: 40)
         
@@ -65,6 +48,8 @@ class ChooseYourCityViewController: UIViewController {
     }
     
     func setFooterImage() {
+        let footerImage = UIImageView()
+        
         footerImage.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 150)
         footerImage.image = UIImage(named: "HandLogoChooseYourCityVC")
         footerImage.contentMode = .scaleAspectFit
@@ -98,43 +83,43 @@ extension ChooseYourCityViewController: UITableViewDataSource, UITableViewDelega
     // MARK: - Table view data source
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return citySectionTitles[section]
+        return dataModelPrefix[section]
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? { // column of letters to the right
-        return citySectionTitles
+        return dataModelPrefix
     }
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-        guard let index = citySectionTitles.firstIndex(of: title) else { return -1 }
+        guard let index = dataModelPrefix.firstIndex(of: title) else { return -1 }
         return index
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return citySectionTitles.count
+        return dataModelPrefix.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let cityKey = citySectionTitles[section]
-        if let cityValues = cityDictionary[cityKey] {
+        let cityKey = dataModelPrefix[section]
+        if let cityValues = dataModelCityDictionary[cityKey] {
             return cityValues.count
         }
+        
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ChooseYourCityTableViewCell.identifier, for: indexPath) as! ChooseYourCityTableViewCell
-        let cityKey = citySectionTitles[indexPath.section]
-        if let cityValues = cityDictionary[cityKey] {
+        
+//        cell.configure(dataModel[indexPath.row])
+        let cityKey = dataModelPrefix[indexPath.section]
+        if let cityValues = dataModelCityDictionary[cityKey] {
             cell.cityLabel.text = cityValues[indexPath.row]
         }
-        
-//            cell.configure(<#Model#>[indexPath.row])
-        
+
         return cell
     }
-    
     
     // MARK: - Table view delegate
     
