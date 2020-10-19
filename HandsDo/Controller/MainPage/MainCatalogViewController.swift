@@ -18,13 +18,39 @@ class MainCatalogViewController: UIViewController {
         }
     }
     
-    lazy var searchBar = UISearchBar(frame: CGRect.zero)
+    //кнопка для выбора города
+//    lazy private var cityButton: UIBarButtonItem = {
+//        let btn = UIBarButtonItem(image: nil, style: .plain, target: self, action: nil)
+//        btn.title = "Город"
+//
+//        btn.tintColor = UIColor.white
+//        return btn
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchBar.placeholder = "Услуга, проблема, предмет быта"
-        navigationItem.titleView = searchBar
+        //создаем заголовок
+        let label = UILabel()
+        label.text = "Мастер на все руки"
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        label.textAlignment = .left
+        
+        var cityButton = UIBarButtonItem()
+        cityButton = UIBarButtonItem(image: nil, style: .plain, target: self, action: nil)
+        cityButton.title = "Город"
+        cityButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        //устанавливаем заголовок слева
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
+        
+        //устанавливаем кнопку выбора города
+        navigationItem.rightBarButtonItem = cityButton
+
+        //создаем контроллер для search bar
+        navigationItem.searchController = UISearchController()
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController?.searchBar.placeholder = "Услуга, проблема, предмет быта"
         
         view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)

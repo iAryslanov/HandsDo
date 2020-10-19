@@ -14,4 +14,6 @@ struct Constants {
     static let isAppFirstOpen = "isAppFirstOpen"
     static let firstIntroduceVCID = "FirstIntroduceViewController"
     static let chooseYourCityVCID = "ChooseYourCityViewController"
+    
+    static let mainTabBarControllerID = "MainTabBarController"
 }

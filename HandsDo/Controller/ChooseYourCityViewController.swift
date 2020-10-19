@@ -26,10 +26,10 @@ class ChooseYourCityViewController: UIViewController {
         setHeaderLabel()
         setFooterImage()
         
-        // Constraints
-        NSLayoutConstraint.activate([
-            
-        ])
+        // MARK: - Constraints
+//        NSLayoutConstraint.activate([
+//
+//        ])
         
         chooseYourCityTableView.register(ChooseYourCityTableViewCell.nib(), forCellReuseIdentifier: ChooseYourCityTableViewCell.identifier)
     }
@@ -63,17 +63,6 @@ class ChooseYourCityViewController: UIViewController {
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Show the navigation bar on other view controllers
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    // MARK: - Navigation
-    
-    
 }
 
 // MARK: - Configure table
@@ -125,6 +114,10 @@ extension ChooseYourCityViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         chooseYourCityTableView.deselectRow(at: indexPath, animated: true)
+        
+        // MARK: - Navigation
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: Constants.mainTabBarControllerID) as? MainTabBarController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
