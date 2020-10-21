@@ -521,6 +521,7 @@
         <!--Каталог-->
         <scene sceneID="oWP-gR-V2O">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xua-wU-cAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q18-FU-ndI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Каталог" image="uiwindow.split.2x1" catalog="system" id="6cw-Id-hr4"/>
                     <toolbarItems/>
@@ -533,7 +534,6 @@
                         <segue destination="zvi-st-RZN" kind="relationship" relationship="rootViewController" id="pdK-dF-xGN"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xua-wU-cAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3101.5999999999999" y="766.99507389162568"/>
         </scene>

@@ -28,6 +28,7 @@
 		B38E4D542527193E0039DD2C /* CabinetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E4D532527193E0039DD2C /* CabinetViewController.swift */; };
 		B3A7156925404E000034721E /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3A7156625404E000034721E /* Rubik-Regular.ttf */; };
 		B3A7156A25404E000034721E /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3A7156725404E000034721E /* Rubik-Medium.ttf */; };
+		B3A71572254062190034721E /* MainCatalogViewController+navBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A71571254062190034721E /* MainCatalogViewController+navBar.swift */; };
 		B3B21462253DD0790063487A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B21461253DD0790063487A /* MainTabBarController.swift */; };
 		B3B2E43C253D7D8E0042DA5D /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2E43B253D7D8E0042DA5D /* MainNavigationController.swift */; };
 		B3B2E43F253D81850042DA5D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2E43E253D81850042DA5D /* Constants.swift */; };
@@ -59,6 +60,7 @@
 		B38E4D532527193E0039DD2C /* CabinetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetViewController.swift; sourceTree = "<group>"; };
 		B3A7156625404E000034721E /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		B3A7156725404E000034721E /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		B3A71571254062190034721E /* MainCatalogViewController+navBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCatalogViewController+navBar.swift"; sourceTree = "<group>"; };
 		B3B21461253DD0790063487A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B3B2E43B253D7D8E0042DA5D /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		B3B2E43E253D81850042DA5D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				B3B21461253DD0790063487A /* MainTabBarController.swift */,
 				B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */,
+				B3A71571254062190034721E /* MainCatalogViewController+navBar.swift */,
 				B38E4D532527193E0039DD2C /* CabinetViewController.swift */,
 				B376133225305080005E787B /* Cells */,
 			);
@@ -289,6 +292,7 @@
 				B31940C4251A142D00E784DC /* SecondIntroduceViewController.swift in Sources */,
 				B38E4D542527193E0039DD2C /* CabinetViewController.swift in Sources */,
 				B30ED6C22518B2AB00BE7E73 /* SceneDelegate.swift in Sources */,
+				B3A71572254062190034721E /* MainCatalogViewController+navBar.swift in Sources */,
 				B355D36F251B2E8C0026D082 /* AllowNotificationsViewController.swift in Sources */,
 				B34E1D6025231F2D00E49CFD /* ChooseYourCityViewController.swift in Sources */,
 				B3285A2625246EC200C683B1 /* CitiesTable.swift in Sources */,

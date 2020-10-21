@@ -22,9 +22,11 @@ class MainCatalogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBarItems()
+        
         view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
-        setNavigationBar()
+        setSearchBar()
         
         serviceTableView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
@@ -32,24 +34,7 @@ class MainCatalogViewController: UIViewController {
         serviceTableView.register(MainCatalogServiceHeaderCell.nib(), forCellReuseIdentifier: MainCatalogServiceHeaderCell.identifier)
     }
     
-    func setNavigationBar() {
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.3215686275, blue: 0.6901960784, alpha: 1)
-        
-        let label = UILabel()
-        label.font = UIFont(name: "Rubik-Regular", size: 12)
-        label.text = "Мастер на все руки"
-        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        label.textAlignment = .left
-        
-        var cityButton = UIBarButtonItem()
-        cityButton = UIBarButtonItem(image: nil, style: .plain, target: self, action: nil)
-        cityButton.title = cityLabel
-        cityButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
-        navigationItem.rightBarButtonItem = cityButton
-        
-        // Set search bar
+    func setSearchBar() {
         navigationItem.searchController = UISearchController()
         navigationItem.searchController?.searchBar.placeholder = "Введите запрос"
         navigationItem.hidesSearchBarWhenScrolling = false

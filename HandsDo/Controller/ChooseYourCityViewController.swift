@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol ChooseYourCityViewControllerDelegate {
+protocol ChooseYourCityViewControllerDelegate: class {
     func fillTheLabelWith(city: String)
 }
 
 class ChooseYourCityViewController: UIViewController {
     
-    var delegate: ChooseYourCityViewControllerDelegate?
+    weak var delegate: ChooseYourCityViewControllerDelegate?
     
     let dataModel = CitiesTable.getCitiesModel()
     let dataModelPrefix = CitiesTable.getCityPrefix()
