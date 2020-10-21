@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         notificationCenter.delegate = self
         notificationCenter.getNotificationSettings { (settings) in
-            if settings.authorizationStatus != .authorized {
+            if UserDefaults().bool(forKey: Constants.isAppFirstOpen) && settings.authorizationStatus != .authorized {
+                // FIXME: Add action here later.
                 print("User has declined notifications in settings")
             }
         }
@@ -51,6 +52,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     // Triggered when user clicking on a notification
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.notification.request.identifier == "Local Notification" {
+            // FIXME: Add action here later.
             print("Handling notifications with the Local Notification Identifier")
         }
         completionHandler()

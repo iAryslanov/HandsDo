@@ -10,6 +10,7 @@ import UIKit
 class MainCatalogViewController: UIViewController {
     
     var dataModel = Services.getServices()
+    var city = UserDefaults().string(forKey: Constants.city)
     
     @IBOutlet weak var serviceTableView: UITableView! {
         didSet {
@@ -18,42 +19,12 @@ class MainCatalogViewController: UIViewController {
         }
     }
     
-    //кнопка для выбора города
-//    lazy private var cityButton: UIBarButtonItem = {
-//        let btn = UIBarButtonItem(image: nil, style: .plain, target: self, action: nil)
-//        btn.title = "Город"
-//
-//        btn.tintColor = UIColor.white
-//        return btn
-//    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //создаем заголовок
-        let label = UILabel()
-        label.text = "Мастер на все руки"
-        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        label.textAlignment = .left
-        
-        var cityButton = UIBarButtonItem()
-        cityButton = UIBarButtonItem(image: nil, style: .plain, target: self, action: nil)
-        cityButton.title = "Город"
-        cityButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
-        //устанавливаем заголовок слева
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
-        
-        //устанавливаем кнопку выбора города
-        navigationItem.rightBarButtonItem = cityButton
-
-        //создаем контроллер для search bar
-        navigationItem.searchController = UISearchController()
-        navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.searchController?.searchBar.placeholder = "Услуга, проблема, предмет быта"
-        
         view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        setNavigationBar()
         
         serviceTableView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
@@ -61,6 +32,27 @@ class MainCatalogViewController: UIViewController {
         serviceTableView.register(MainCatalogServiceHeaderCell.nib(), forCellReuseIdentifier: MainCatalogServiceHeaderCell.identifier)
     }
     
+    func setNavigationBar() {
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        let label = UILabel()
+        label.text = "Мастер на все руки"
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        label.textAlignment = .left
+        
+        var cityButton = UIBarButtonItem()
+        cityButton = UIBarButtonItem(image: nil, style: .plain, target: self, action: nil)
+        cityButton.title = city
+        cityButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
+        navigationItem.rightBarButtonItem = cityButton
+        
+        // Set search bar
+        navigationItem.searchController = UISearchController()
+        navigationItem.searchController?.searchBar.placeholder = "Услуга, проблема, предмет быта"
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
 }
 
 // MARK: - Configure table
@@ -78,9 +70,9 @@ extension MainCatalogViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        if section == 0 {
-//            return nil
-//        }
+        //        if section == 0 {
+        //            return nil
+        //        }
         
         let header = serviceTableView.dequeueReusableCell(withIdentifier: MainCatalogServiceHeaderCell.identifier) as! MainCatalogServiceHeaderCell
         
@@ -90,27 +82,27 @@ extension MainCatalogViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        if section == 0 {
-//            return CGFloat.leastNormalMagnitude
-//        }
+        //        if section == 0 {
+        //            return CGFloat.leastNormalMagnitude
+        //        }
         
-//        return section == 0 ? CGFloat.leastNormalMagnitude : 20
+        //        return section == 0 ? CGFloat.leastNormalMagnitude : 20
         
         return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.row == 0 && indexPath.section == 0 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogFirstTableViewCell.identifier, for: indexPath)
-//            return cell
-//        }
+        //        if indexPath.row == 0 && indexPath.section == 0 {
+        //            let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogFirstTableViewCell.identifier, for: indexPath)
+        //            return cell
+        //        }
         
-            let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogServiceCell.identifier, for: indexPath) as! MainCatalogServiceCell
-            
-            cell.configure(dataModel[indexPath.section], index: indexPath.row)
-            
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainCatalogServiceCell.identifier, for: indexPath) as! MainCatalogServiceCell
         
+        cell.configure(dataModel[indexPath.section], index: indexPath.row)
         
+        return cell
     }
+    
+    
+}

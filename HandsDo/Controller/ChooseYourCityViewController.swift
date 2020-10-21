@@ -21,7 +21,7 @@ class ChooseYourCityViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
         
         setHeaderLabel()
         setFooterImage()

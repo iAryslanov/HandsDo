@@ -11,10 +11,10 @@ class AllowNotificationsViewController: UIViewController {
     
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var allowButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         allowButton.layer.cornerRadius = allowButton.layer.frame.size.height / 3.5
     }
@@ -26,16 +26,13 @@ class AllowNotificationsViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-
+    
     // MARK: - Navigation
     
     @IBAction func skipButtonGoToChooseYourCityVC(_ sender: Any) {
         
         UserDefaults().setValue(true, forKey: Constants.isAppFirstOpen) // Setting the boolean key. App is open first time now.
-        
-        let storyboard = UIStoryboard(name: Constants.mainStoryboardID, bundle: nil)
-        guard let vc = storyboard.instantiateViewController(identifier: Constants.chooseYourCityVCID) as? ChooseYourCityViewController else { return }
-        show(vc, sender: nil)
+        goNextVC()
     }
     
     @IBAction func goToChooseYourCityVC(_ sender: Any) {
@@ -49,14 +46,23 @@ class AllowNotificationsViewController: UIViewController {
             (didAllow, error) in
             if !didAllow {
                 // FIXME: - Add action here later.
-                print("User has declined notifications")
+                print("User has declined notifications from AllowNotificationsViewController")
+                
+                DispatchQueue.main.async {
+                    self.goNextVC()
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.goNextVC()
+                }
             }
         }
-        
+    }
+    
+    private func goNextVC() {
         let storyboard = UIStoryboard(name: Constants.mainStoryboardID, bundle: nil)
         guard let vc = storyboard.instantiateViewController(identifier: Constants.chooseYourCityVCID) as? ChooseYourCityViewController else { return }
-        show(vc, sender: nil)
+        self.show(vc, sender: nil)
     }
-
-
+    
 }

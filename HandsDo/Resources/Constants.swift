@@ -10,10 +10,11 @@ struct Constants {
     
     private init() {}
     
-    static let mainStoryboardID = "Main"
-    static let isAppFirstOpen = "isAppFirstOpen"
+    static let mainStoryboardID   = "Main"
+    static let isAppFirstOpen     = "isAppFirstOpen"
     static let firstIntroduceVCID = "FirstIntroduceViewController"
     static let chooseYourCityVCID = "ChooseYourCityViewController"
+    static let city = "City"
     
     static let mainTabBarControllerID = "MainTabBarController"
 }
