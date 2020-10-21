@@ -10,7 +10,7 @@ import UIKit
 class MainCatalogViewController: UIViewController {
     
     var dataModel = Services.getServices()
-    var city = UserDefaults().string(forKey: Constants.city)
+    var cityLabel: String?
     
     @IBOutlet weak var serviceTableView: UITableView! {
         didSet {
@@ -42,7 +42,7 @@ class MainCatalogViewController: UIViewController {
         
         var cityButton = UIBarButtonItem()
         cityButton = UIBarButtonItem(image: nil, style: .plain, target: self, action: nil)
-        cityButton.title = city
+        cityButton.title = cityLabel
         cityButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
@@ -102,6 +102,13 @@ extension MainCatalogViewController: UITableViewDataSource, UITableViewDelegate 
         cell.configure(dataModel[indexPath.section], index: indexPath.row)
         
         return cell
+    }
+}
+
+extension MainCatalogViewController: ChooseYourCityViewControllerDelegate {
+    
+    func fillTheLabelWith(city: String) {
+        cityLabel = city
     }
     
     

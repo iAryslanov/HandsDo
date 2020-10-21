@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol ChooseYourCityViewControllerDelegate {
+    func fillTheLabelWith(city: String)
+}
+
 class ChooseYourCityViewController: UIViewController {
+    
+    var delegate: ChooseYourCityViewControllerDelegate?
     
     let dataModel = CitiesTable.getCitiesModel()
     let dataModelPrefix = CitiesTable.getCityPrefix()
@@ -114,6 +120,8 @@ extension ChooseYourCityViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         chooseYourCityTableView.deselectRow(at: indexPath, animated: true)
+        
+        delegate?.fillTheLabelWith(city: "\(indexPath.row)")
         
         // MARK: - Navigation
         guard let vc = storyboard?.instantiateViewController(withIdentifier: Constants.mainTabBarControllerID) as? MainTabBarController else { return }
