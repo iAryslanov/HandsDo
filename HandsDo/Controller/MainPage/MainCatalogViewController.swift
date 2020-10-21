@@ -33,11 +33,12 @@ class MainCatalogViewController: UIViewController {
     }
     
     func setNavigationBar() {
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.3215686275, blue: 0.6901960784, alpha: 1)
         
         let label = UILabel()
+        label.font = UIFont(name: "Rubik-Regular", size: 12)
         label.text = "Мастер на все руки"
-        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         label.textAlignment = .left
         
         var cityButton = UIBarButtonItem()
@@ -50,7 +51,7 @@ class MainCatalogViewController: UIViewController {
         
         // Set search bar
         navigationItem.searchController = UISearchController()
-        navigationItem.searchController?.searchBar.placeholder = "Услуга, проблема, предмет быта"
+        navigationItem.searchController?.searchBar.placeholder = "Введите запрос"
         navigationItem.hidesSearchBarWhenScrolling = false
     }
 }

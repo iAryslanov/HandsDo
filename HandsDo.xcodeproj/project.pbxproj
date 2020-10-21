@@ -26,6 +26,8 @@
 		B38C6338253057A6009670D3 /* MainCatalogFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C6336253057A6009670D3 /* MainCatalogFirstTableViewCell.swift */; };
 		B38E4D50252707780039DD2C /* MainCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */; };
 		B38E4D542527193E0039DD2C /* CabinetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E4D532527193E0039DD2C /* CabinetViewController.swift */; };
+		B3A7156925404E000034721E /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3A7156625404E000034721E /* Rubik-Regular.ttf */; };
+		B3A7156A25404E000034721E /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3A7156725404E000034721E /* Rubik-Medium.ttf */; };
 		B3B21462253DD0790063487A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B21461253DD0790063487A /* MainTabBarController.swift */; };
 		B3B2E43C253D7D8E0042DA5D /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2E43B253D7D8E0042DA5D /* MainNavigationController.swift */; };
 		B3B2E43F253D81850042DA5D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2E43E253D81850042DA5D /* Constants.swift */; };
@@ -55,6 +57,8 @@
 		B38C6336253057A6009670D3 /* MainCatalogFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatalogFirstTableViewCell.swift; sourceTree = "<group>"; };
 		B38E4D4F252707780039DD2C /* MainCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatalogViewController.swift; sourceTree = "<group>"; };
 		B38E4D532527193E0039DD2C /* CabinetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetViewController.swift; sourceTree = "<group>"; };
+		B3A7156625404E000034721E /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		B3A7156725404E000034721E /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		B3B21461253DD0790063487A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B3B2E43B253D7D8E0042DA5D /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		B3B2E43E253D81850042DA5D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		B31940B12519DC4800E784DC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B3A7155F254047D80034721E /* Fonts */,
 				B3B2E43E253D81850042DA5D /* Constants.swift */,
 				B30ED6C52518B2AB00BE7E73 /* Main.storyboard */,
 				B30ED6C82518B2AC00BE7E73 /* Assets.xcassets */,
@@ -171,6 +176,15 @@
 				B3FB8B87252DE7220068EFD8 /* MainCatalogServiceHeaderCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B3A7155F254047D80034721E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B3A7156725404E000034721E /* Rubik-Medium.ttf */,
+				B3A7156625404E000034721E /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		B3B492A32526041A0020DA4F /* Introduce */ = {
@@ -243,9 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B34E1D692523418700E49CFD /* ChooseYourCityTableViewCell.xib in Resources */,
+				B3A7156925404E000034721E /* Rubik-Regular.ttf in Resources */,
 				B38C6337253057A6009670D3 /* MainCatalogFirstTableViewCell.xib in Resources */,
 				B30ED6CC2518B2AC00BE7E73 /* LaunchScreen.storyboard in Resources */,
 				B3FB8B89252DE7220068EFD8 /* MainCatalogServiceHeaderCell.xib in Resources */,
+				B3A7156A25404E000034721E /* Rubik-Medium.ttf in Resources */,
 				B30ED6C92518B2AC00BE7E73 /* Assets.xcassets in Resources */,
 				B30ED6C72518B2AB00BE7E73 /* Main.storyboard in Resources */,
 			);
