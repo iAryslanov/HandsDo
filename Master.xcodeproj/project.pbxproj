@@ -37,7 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B30ED6BC2518B2AB00BE7E73 /* HandsDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30ED6BC2518B2AB00BE7E73 /* Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30ED6BF2518B2AB00BE7E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B30ED6C12518B2AB00BE7E73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B30ED6C62518B2AB00BE7E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		B30ED6B32518B2AB00BE7E73 = {
 			isa = PBXGroup;
 			children = (
-				B30ED6BE2518B2AB00BE7E73 /* HandsDo */,
+				B30ED6BE2518B2AB00BE7E73 /* Master */,
 				B30ED6BD2518B2AB00BE7E73 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,21 +90,20 @@
 		B30ED6BD2518B2AB00BE7E73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B30ED6BC2518B2AB00BE7E73 /* HandsDo.app */,
+				B30ED6BC2518B2AB00BE7E73 /* Master.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B30ED6BE2518B2AB00BE7E73 /* HandsDo */ = {
+		B30ED6BE2518B2AB00BE7E73 /* Master */ = {
 			isa = PBXGroup;
 			children = (
 				B31940B42519DD0800E784DC /* Application */,
 				B3285A2825246EC800C683B1 /* Model */,
 				B31940BF2519E26A00E784DC /* Controller */,
 				B31940B12519DC4800E784DC /* Resources */,
-				B30ED6CD2518B2AC00BE7E73 /* Info.plist */,
 			);
-			path = HandsDo;
+			path = Master;
 			sourceTree = "<group>";
 		};
 		B31940B12519DC4800E784DC /* Resources */ = {
@@ -115,6 +114,7 @@
 				B30ED6C52518B2AB00BE7E73 /* Main.storyboard */,
 				B30ED6C82518B2AC00BE7E73 /* Assets.xcassets */,
 				B30ED6CA2518B2AC00BE7E73 /* LaunchScreen.storyboard */,
+				B30ED6CD2518B2AC00BE7E73 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -205,9 +205,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B30ED6BB2518B2AB00BE7E73 /* HandsDo */ = {
+		B30ED6BB2518B2AB00BE7E73 /* Master */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B30ED6D02518B2AC00BE7E73 /* Build configuration list for PBXNativeTarget "HandsDo" */;
+			buildConfigurationList = B30ED6D02518B2AC00BE7E73 /* Build configuration list for PBXNativeTarget "Master" */;
 			buildPhases = (
 				B30ED6B82518B2AB00BE7E73 /* Sources */,
 				B30ED6B92518B2AB00BE7E73 /* Frameworks */,
@@ -217,9 +217,9 @@
 			);
 			dependencies = (
 			);
-			name = HandsDo;
+			name = Master;
 			productName = HandsDo;
-			productReference = B30ED6BC2518B2AB00BE7E73 /* HandsDo.app */;
+			productReference = B30ED6BC2518B2AB00BE7E73 /* Master.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -236,7 +236,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B30ED6B72518B2AB00BE7E73 /* Build configuration list for PBXProject "HandsDo" */;
+			buildConfigurationList = B30ED6B72518B2AB00BE7E73 /* Build configuration list for PBXProject "Master" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -249,7 +249,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B30ED6BB2518B2AB00BE7E73 /* HandsDo */,
+				B30ED6BB2518B2AB00BE7E73 /* Master */,
 			);
 		};
 /* End PBXProject section */
@@ -444,13 +444,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26U39N9LS4;
-				INFOPLIST_FILE = HandsDo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Master/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iAryslanov.HandsDo;
+				PRODUCT_BUNDLE_IDENTIFIER = iAryslanov.Master;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -464,13 +464,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26U39N9LS4;
-				INFOPLIST_FILE = HandsDo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Master/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iAryslanov.HandsDo;
+				PRODUCT_BUNDLE_IDENTIFIER = iAryslanov.Master;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,7 +480,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B30ED6B72518B2AB00BE7E73 /* Build configuration list for PBXProject "HandsDo" */ = {
+		B30ED6B72518B2AB00BE7E73 /* Build configuration list for PBXProject "Master" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B30ED6CE2518B2AC00BE7E73 /* Debug */,
@@ -489,7 +489,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B30ED6D02518B2AC00BE7E73 /* Build configuration list for PBXNativeTarget "HandsDo" */ = {
+		B30ED6D02518B2AC00BE7E73 /* Build configuration list for PBXNativeTarget "Master" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B30ED6D12518B2AC00BE7E73 /* Debug */,
