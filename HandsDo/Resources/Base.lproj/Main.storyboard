@@ -215,7 +215,7 @@
                         <viewLayoutGuide key="safeArea" id="QlT-8x-yWr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Помощь" image="record.circle.fill" catalog="system" id="gKu-Qx-GcK"/>
+                    <tabBarItem key="tabBarItem" title="Помощь" image="tabBarHelpMainUnpressed" id="gKu-Qx-GcK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MiT-Ie-Hsx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,20 +229,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GnP-yL-VgI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GnP-yL-VgI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" systemColor="systemGrayColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainCatalogServiceCell" id="TEW-UP-wci" customClass="MainCatalogServiceCell" customModule="HandsDo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="56"/>
+                                        <rect key="frame" x="16" y="55.333332061767578" width="343" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TEW-UP-wci" id="lS8-ko-lFU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHJ-hX-iis">
-                                                    <rect key="frame" x="56" y="28" width="291" height="0.0"/>
+                                                    <rect key="frame" x="56" y="28" width="259" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.54527336360000001" green="0.54461795089999998" blue="0.56470894810000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -255,7 +254,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zvc-jf-lut">
-                                                    <rect key="frame" x="355" y="20" width="12" height="16.333333333333329"/>
+                                                    <rect key="frame" x="323" y="20" width="12" height="16.333333333333329"/>
                                                     <color key="tintColor" systemColor="systemGrayColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="bQe-Tg-aHr"/>
@@ -263,7 +262,7 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="ZHJ-hX-iis" firstAttribute="leading" secondItem="Xah-40-tyf" secondAttribute="trailing" constant="8" id="CUW-JD-nYG"/>
                                                 <constraint firstItem="ZHJ-hX-iis" firstAttribute="centerY" secondItem="lS8-ko-lFU" secondAttribute="centerY" id="Gm5-QH-TAp"/>
@@ -521,9 +520,8 @@
         <!--Каталог-->
         <scene sceneID="oWP-gR-V2O">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xua-wU-cAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q18-FU-ndI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Каталог" image="uiwindow.split.2x1" catalog="system" id="6cw-Id-hr4"/>
+                    <tabBarItem key="tabBarItem" title="Каталог" image="tabBarServicesMainUnpressed" id="6cw-Id-hr4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ywv-Mf-uE2">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -534,6 +532,7 @@
                         <segue destination="zvi-st-RZN" kind="relationship" relationship="rootViewController" id="pdK-dF-xGN"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xua-wU-cAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3101.5999999999999" y="766.99507389162568"/>
         </scene>
@@ -541,7 +540,7 @@
         <scene sceneID="BSa-de-DhD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pPK-Up-NXP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Кабинет" image="person.crop.rectangle.fill" catalog="system" id="8Zt-u9-HBd"/>
+                    <tabBarItem key="tabBarItem" title="Кабинет" image="tabBarProfileMainUnpressed" id="8Zt-u9-HBd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I9z-Qt-xuN">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -564,9 +563,9 @@
         <image name="HandLogoThirdIntroduceVC" width="156" height="145.66667175292969"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="person.crop.rectangle.fill" catalog="system" width="128" height="93"/>
-        <image name="record.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="uiwindow.split.2x1" catalog="system" width="128" height="93"/>
+        <image name="tabBarHelpMainUnpressed" width="20" height="20"/>
+        <image name="tabBarProfileMainUnpressed" width="20" height="20"/>
+        <image name="tabBarServicesMainUnpressed" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
